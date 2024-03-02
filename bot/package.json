@@ -1,0 +1,8 @@
+{
+  "name": "bot",
+  "private": true,
+  "packageManager": "yarn@4.1.0",
+  "dependencies": {
+    "discord.js": "^14.14.1"
+  }
+}

@@ -3,8 +3,14 @@
   "workspaces": {
     "packages": [
       "api",
-      "web"
+      "web",
+      "bot"
     ]
+  },
+  "scripts": {
+    "start": "tsc -p ./bot/ & node --env-file=.env ./bot/dist/bot.js ",
+    "deploy": "tsc -p ./bot/ & node --env-file=.env ./bot/dist/deploy-commands.js",
+    "build": "tsc -p ./bot/"
   },
   "devDependencies": {
     "@redwoodjs/core": "7.0.6",
