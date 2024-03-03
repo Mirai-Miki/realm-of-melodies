@@ -35,6 +35,5 @@ function getCommandData() {
   const command = new SlashCommandBuilder()
     .setName('invite')
     .setDescription('Gets an Invite link for the bot.');
-
   return command as SlashCommandBuilder;
 }

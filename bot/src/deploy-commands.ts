@@ -9,7 +9,7 @@ const token = process.env.DISCORD_BOT_TOKEN;
 
 const commands: any[] = [];
 // Grab all the command folders from the Interactions directory you created earlier
-const foldersPath = path.join(__dirname, 'Interactions');
+const foldersPath = path.join(__dirname, 'interactions');
 
 function setInteractions(dir: string) {
   const files = fs.readdirSync(dir);
