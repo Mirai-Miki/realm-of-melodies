@@ -4,12 +4,12 @@ const path = require('node:path');
 
 const dev = process.env.DEV;
 const clientId = process.env.DISCORD_CLIENT_ID;
-const guildId = '1187214107921879100';
+const guildId = '1213452175527911424';
 const token = process.env.DISCORD_BOT_TOKEN;
 
 const commands: any[] = [];
-// Grab all the command folders from the commands directory you created earlier
-const foldersPath = path.join(__dirname, 'commands');
+// Grab all the command folders from the Interactions directory you created earlier
+const foldersPath = path.join(__dirname, 'Interactions');
 
 function setInteractions(dir: string) {
   const files = fs.readdirSync(dir);
