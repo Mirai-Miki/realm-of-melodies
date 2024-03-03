@@ -14,7 +14,8 @@
   },
   "devDependencies": {
     "@redwoodjs/core": "7.0.6",
-    "@redwoodjs/project-config": "7.0.6"
+    "@redwoodjs/project-config": "7.0.6",
+    "node-ssh": "latest"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
