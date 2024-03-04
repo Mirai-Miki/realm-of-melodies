@@ -10,10 +10,11 @@ import { Client } from './structures';
 import { join } from 'path';
 
 const token = process.env.DISCORD_BOT_TOKEN;
+const dev = process.env.DEV;
 const fs = require('fs');
 
 const client = new Client({
-  intents: [GatewayIntentBits.Guilds],
+  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildVoiceStates],
   partials: [Partials.GuildMember, Partials.User],
 });
 
@@ -77,9 +78,9 @@ async function handleError(client: Client, err: Error) {
   const debugChannel = client.channels.cache.get(
     '1213452544601362443'
   ) as TextChannel;
-  if (debugChannel) {
+  if (debugChannel && !dev) {
     try {
-      await debugChannel.send(`An error occurred: \`\`\`${err}\`\`\``);
+      await debugChannel.send(`An error occurred: \`\`\`${err.message}\n\n${err.stack}\`\`\``);
     } catch {
       console.error(err);
     }

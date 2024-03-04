@@ -3,6 +3,9 @@
   "private": true,
   "packageManager": "yarn@4.1.0",
   "dependencies": {
-    "discord.js": "latest"
+    "@discordjs/voice": "latest",
+    "discord.js": "latest",
+    "opusscript": "latest",
+    "sodium-native": "latest"
   }
 }

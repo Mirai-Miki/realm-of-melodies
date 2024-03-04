@@ -26,3 +26,12 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+///////////////////////////////////////////////////////////////////////////////
+/////////////////////////////// Music /////////////////////////////////////////
+
+model Track {
+  id       Int    @id @default(autoincrement())
+  filePath String
+  title    String
+}

@@ -1857,6 +1857,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@discordjs/voice@npm:latest":
+  version: 0.16.1
+  resolution: "@discordjs/voice@npm:0.16.1"
+  dependencies:
+    "@types/ws": "npm:^8.5.9"
+    discord-api-types: "npm:0.37.61"
+    prism-media: "npm:^1.3.5"
+    tslib: "npm:^2.6.2"
+    ws: "npm:^8.14.2"
+  checksum: 10c0/a84c2120f83f79c3a26649292f0c655044d6554cedfc83d271509f3ca41a1aa80f2a84b00aaadc6dd7c04743d99f230c93718bfebc78d2f30478f1adcc96ed4b
+  languageName: node
+  linkType: hard
+
 "@discordjs/ws@npm:^1.0.2":
   version: 1.0.2
   resolution: "@discordjs/ws@npm:1.0.2"
@@ -7914,7 +7927,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bot@workspace:bot"
   dependencies:
+    "@discordjs/voice": "npm:latest"
     discord.js: "npm:latest"
+    opusscript: "npm:latest"
+    sodium-native: "npm:latest"
   languageName: unknown
   linkType: soft
 
@@ -15817,6 +15833,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-gyp-build@npm:^4.6.0":
+  version: 4.8.0
+  resolution: "node-gyp-build@npm:4.8.0"
+  bin:
+    node-gyp-build: bin.js
+    node-gyp-build-optional: optional.js
+    node-gyp-build-test: build-test.js
+  checksum: 10c0/85324be16f81f0235cbbc42e3eceaeb1b5ab94c8d8f5236755e1435b4908338c65a4e75f66ee343cbcb44ddf9b52a428755bec16dcd983295be4458d95c8e1ad
+  languageName: node
+  linkType: hard
+
 "node-gyp@npm:latest":
   version: 10.0.1
   resolution: "node-gyp@npm:10.0.1"
@@ -16225,6 +16252,13 @@ __metadata:
     prelude-ls: "npm:^1.2.1"
     type-check: "npm:^0.4.0"
   checksum: 10c0/66fba794d425b5be51353035cf3167ce6cfa049059cbb93229b819167687e0f48d2bc4603fcb21b091c99acb516aae1083624675b15c4765b2e4693a085e959c
+  languageName: node
+  linkType: hard
+
+"opusscript@npm:latest":
+  version: 0.1.1
+  resolution: "opusscript@npm:0.1.1"
+  checksum: 10c0/43216f82b0b707958ab0f0d0b16dba9bd82d0e9756417d24f8674c38b8ac992934d5d8744f87f267ebd83b61bd7dac4d717d616e0038b2aeb761bb03eb6485cd
   languageName: node
   linkType: hard
 
@@ -17259,6 +17293,27 @@ __metadata:
   version: 1.0.42
   resolution: "printable-characters@npm:1.0.42"
   checksum: 10c0/7c94d94c6041a37c385af770c7402ad5a2e8a3429ca4d2505a9f19fde39bac9a8fd1edfbfa02f1eae5b4b0f3536b6b8ee6c84621f7c0fcb41476b2df6ee20e4b
+  languageName: node
+  linkType: hard
+
+"prism-media@npm:^1.3.5":
+  version: 1.3.5
+  resolution: "prism-media@npm:1.3.5"
+  peerDependencies:
+    "@discordjs/opus": ">=0.8.0 <1.0.0"
+    ffmpeg-static: ^5.0.2 || ^4.2.7 || ^3.0.0 || ^2.4.0
+    node-opus: ^0.3.3
+    opusscript: ^0.0.8
+  peerDependenciesMeta:
+    "@discordjs/opus":
+      optional: true
+    ffmpeg-static:
+      optional: true
+    node-opus:
+      optional: true
+    opusscript:
+      optional: true
+  checksum: 10c0/3bd9f3b246c8ac7aa744d87d502f65280f5c5635555a08d8ff548da99f29ee2bf92c4696dab1e22c2e773f71f95a24ec4f06d82dea39f07c1d7b90956c56d173
   languageName: node
   linkType: hard
 
@@ -18944,6 +18999,16 @@ __metadata:
     ip-address: "npm:^9.0.5"
     smart-buffer: "npm:^4.2.0"
   checksum: 10c0/ac77b515c260473cc7c4452f09b20939e22510ce3ae48385c516d1d5784374d5cc75be3cb18ff66cc985a7f4f2ef8fef84e984c5ec70aad58355ed59241f40a8
+  languageName: node
+  linkType: hard
+
+"sodium-native@npm:latest":
+  version: 4.0.10
+  resolution: "sodium-native@npm:4.0.10"
+  dependencies:
+    node-gyp: "npm:latest"
+    node-gyp-build: "npm:^4.6.0"
+  checksum: 10c0/95fcc84a3b4589833a41ac9e6abebb719978bbdc50945cf4e78df87d0273f021e1f4079d9b788dca563b34ceb9d83d0d2aab12448da66af9c489fe30bcadc0c1
   languageName: node
   linkType: hard
 

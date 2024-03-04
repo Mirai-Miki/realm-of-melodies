@@ -1,6 +1,7 @@
 import type { DiscordEvent } from 'src/types';
 import type { Client } from 'src/structures';
 
+
 import { Events } from 'discord.js';
 
 export = {
@@ -25,3 +26,5 @@ async function setActivity(client: Client) {
     type: ActivityType.Watching,
   });
 }
+
+

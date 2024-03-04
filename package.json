@@ -8,8 +8,8 @@
     ]
   },
   "scripts": {
-    "start": "tsc -p ./bot/ & node --env-file=.env ./bot/dist/bot.js ",
-    "deploy": "node --env-file=.env ./bot/dist/deploy-commands.js",
+    "start": "npm run build & node --env-file=.env ./bot/dist/bot.js ",
+    "deploy": "npm run build & node --env-file=.env ./bot/dist/deploy-commands.js",
     "build": "tsc -p ./bot/"
   },
   "devDependencies": {
