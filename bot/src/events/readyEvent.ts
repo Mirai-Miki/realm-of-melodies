@@ -1,30 +1,27 @@
-import type { DiscordEvent } from 'src/types';
-import type { Client } from 'src/structures';
+import { Events } from 'discord.js'
 
-
-import { Events } from 'discord.js';
+import type { Client } from 'src/structures'
+import type { DiscordEvent } from 'src/types'
 
 export = {
   name: Events.ClientReady,
   once: true,
   async execute(client: Client) {
-    console.log(`Connected as: ${client.user?.tag}`);
-    await setActivity(client);
+    console.log(`Connected as: ${client.user?.tag}`)
+    await setActivity(client)
 
     setInterval(() => {
-      setActivity(client);
-    }, 300000);
+      setActivity(client)
+    }, 300000)
   },
-} as DiscordEvent;
+} as DiscordEvent
 
-const { ActivityType } = require('discord.js');
+const { ActivityType } = require('discord.js')
 
 async function setActivity(client: Client) {
-  if (!client.user) return;
+  if (!client.user) return
   client.user.setActivity({
     name: `${client.guilds.cache.size} Servers`,
     type: ActivityType.Watching,
-  });
+  })
 }
-
-
